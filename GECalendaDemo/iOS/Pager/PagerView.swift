@@ -2,7 +2,9 @@
 //  PagerView.swift
 //  GECalendaDemo (iOS)
 //
-//  Created by GoEun Jeong on 2021/08/21.
+//  Created by GoEun Jeong on 2021/08/23.
+//
+//  https://swiftwithmajid.com/2019/12/25/building-pager-view-in-swiftui/
 //
 
 import SwiftUI
