@@ -1,14 +1,15 @@
 //
 //  WeekView.swift
-//  GECalendaDemo
+//  GECalendarDemo (macOS)
 //
-//  Created by GoEun Jeong on 2021/08/23.
+//  Created by GoEun Jeong on 2021/08/24.
 //
 
 import SwiftUI
 
 struct WeekView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
+    @EnvironmentObject var appearance: Appearance
     
     let week: Date
     let content: (Date) -> DateView
@@ -36,10 +37,21 @@ struct WeekView<DateView>: View where DateView: View {
                         self.content(date)
                     } else {
                         self.content(date)
-                            .opacity(0.2)
+                            .opacity(appearance.extraDayOpacity)
                     }
                 }
             }
+        }
+    }
+}
+
+struct WeekView_Previews: PreviewProvider {
+    static let appearance = Appearance()
+    @State static var date: Date? = Date()
+    
+    static var previews: some View {
+        Group {
+            GECalendar(selectedDate: $date, appearance: appearance)
         }
     }
 }

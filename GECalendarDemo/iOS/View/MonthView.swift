@@ -9,22 +9,18 @@ import SwiftUI
 
 struct MonthView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
+    @EnvironmentObject var appearance: Appearance
+    @EnvironmentObject var calendarVM: CalendarViewModel
     
     @State private var month: Date
-    let showHeader: Bool
     let content: (Date) -> DateView
-    
-    @State private var offset: CGSize = .zero
-    @State private var leading: Bool = true
     
     init(
         month: Date,
-        showHeader: Bool = true,
         @ViewBuilder content: @escaping (Date) -> DateView
     ) {
         self._month = State(initialValue: month)
         self.content = content
-        self.showHeader = showHeader
     }
     
     private var weeks: [Date] {
@@ -37,28 +33,17 @@ struct MonthView<DateView>: View where DateView: View {
         )
     }
     
-    func changeDateBy(_ months: Int) {
-        if let date = Calendar.current.date(byAdding: .month, value: months, to: month) {
-            self.month = date
-        }
-    }
-    
     private var header: some View {
-        let component = calendar.component(.month, from: month)
-        let formatter = component == 1 ? DateFormatter.monthAndYear : .month
         return HStack{
-            Text(formatter.string(from: month))
-                .font(.title)
+            Text(appearance.headerDateFormatter.string(from: month))
+                .font(appearance.headerFont)
+                .foregroundColor(appearance.headerColor)
                 .padding(.horizontal)
             Spacer()
             HStack{
                 Group{
                     Button(action: {
-                        withAnimation {
-                            self.changeDateBy(-1)
-                            self.leading = true
-                        }
-                        
+                        self.calendarVM.changeDateBy(0)
                     }) {
                         Image(systemName: "chevron.left.square")
                             .resizable()
@@ -70,10 +55,8 @@ struct MonthView<DateView>: View where DateView: View {
                             .resizable()
                     }
                     Button(action: {
-                        withAnimation {
-                            self.changeDateBy(1)
-                            self.leading = false
-                        }
+                        self.calendarVM.changeDateBy(1)
+                        
                     }) {
                         Image(systemName: "chevron.right.square")
                             .resizable()
@@ -89,18 +72,21 @@ struct MonthView<DateView>: View where DateView: View {
     
     var body: some View {
         VStack {
-            if showHeader {
+            if appearance.isHeader {
                 header
             }
             HStack{
                 ForEach(0..<7, id: \.self) {index in
-                    Text("30")
+                    Text("00")
                         .hidden()
                         .padding(8)
                         .clipShape(Circle())
                         .padding(.horizontal, 4)
                         .overlay(
-                            Text(getWeekDaysSorted()[index].uppercased()))
+                            Text(appearance.weekDayFormatter.shortWeekdaySymbols[index])
+                                .foregroundColor(appearance.weekDayColor)
+                                .font(appearance.weekDayFont)
+                        )
                 }
             }
             
@@ -109,10 +95,14 @@ struct MonthView<DateView>: View where DateView: View {
             }
         }
     }
+}
+
+struct MonthView_Previews: PreviewProvider {
+    static let appearance = Appearance()
     
-    func getWeekDaysSorted() -> [String]{
-        let weekDays = Calendar.current.shortWeekdaySymbols
-        let sortedWeekDays = Array(weekDays[Calendar.current.firstWeekday - 1 ..< Calendar.current.shortWeekdaySymbols.count] + weekDays[0 ..< Calendar.current.firstWeekday - 1])
-        return sortedWeekDays
+    static var previews: some View {
+        Group {
+            GECalendar(appearance: appearance)
+        }
     }
 }

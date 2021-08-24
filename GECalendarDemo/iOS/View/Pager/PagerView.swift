@@ -43,8 +43,8 @@ struct PagerView<Content: View>: View {
     var body: some View {
         GeometryReader { geometry in
             HStack(alignment: .center , spacing: 0) {
-                self.content.frame(width: geometry.size.width)
-                //, alignment: .topLeading)
+                self.content.frame(width: geometry.size.width
+                , alignment: .top)
             }
         
             .frame(width: geometry.size.width, alignment: .leading)
