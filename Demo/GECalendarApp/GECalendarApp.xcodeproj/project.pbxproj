@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D93BACDC26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BACC926D143220094ADD9 /* GECalendaDemoApp.swift */; };
+		D93BACDD26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BACC926D143220094ADD9 /* GECalendaDemoApp.swift */; };
+		D93BACE026D143240094ADD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93BACCB26D143240094ADD9 /* Assets.xcassets */; };
+		D93BACE126D143240094ADD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93BACCB26D143240094ADD9 /* Assets.xcassets */; };
+		D9E019AB26D38828005C7736 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AA26D38828005C7736 /* PagerView.swift */; };
+		D9E019B126D390A5005C7736 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AF26D390A5005C7736 /* CalendarView.swift */; };
+		D9E019B326D390A5005C7736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019B026D390A5005C7736 /* ContentView.swift */; };
+		D9E019B426D390A5005C7736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019B026D390A5005C7736 /* ContentView.swift */; };
+		D9E019B726D3BD45005C7736 /* GECalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019B626D3BD45005C7736 /* GECalendarView.swift */; };
+		D9E019BA26D3BD6E005C7736 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019B926D3BD6E005C7736 /* MonthView.swift */; };
+		D9E019BD26D3BD9A005C7736 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019BC26D3BD99005C7736 /* WeekView.swift */; };
+		D9E019C226D3BDB1005C7736 /* Calendar+generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019C126D3BDB1005C7736 /* Calendar+generate.swift */; };
+		D9E019C326D3BDB1005C7736 /* Calendar+generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019C126D3BDB1005C7736 /* Calendar+generate.swift */; };
+		D9E019C826D3CE2E005C7736 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019C726D3CE2E005C7736 /* Appearance.swift */; };
+		D9E019CE26D3E0E4005C7736 /* ShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019CD26D3E0E4005C7736 /* ShapeModifier.swift */; };
+		D9E01A0626D4A8A4005C7736 /* GECalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E01A0526D4A8A4005C7736 /* GECalendarView.swift */; };
+		D9E01A0826D4A8C4005C7736 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E01A0726D4A8C4005C7736 /* MonthView.swift */; };
+		D9E01A0A26D4A8CE005C7736 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E01A0926D4A8CD005C7736 /* WeekView.swift */; };
+		D9E01A0C26D4A8DE005C7736 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */; };
+		D9E01A1426D4A953005C7736 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AA26D38828005C7736 /* PagerView.swift */; };
+		D9E01A1526D4D7F2005C7736 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019C726D3CE2E005C7736 /* Appearance.swift */; };
+		D9FD9F7526D625E800664757 /* GECalendarPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7426D625E800664757 /* GECalendarPreview.swift */; };
+		D9FD9F7726D6517E00664757 /* GECalendarPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */; };
+		D9FD9F9F26D6560900664757 /* ShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019CD26D3E0E4005C7736 /* ShapeModifier.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D93BACC926D143220094ADD9 /* GECalendaDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendaDemoApp.swift; sourceTree = "<group>"; };
+		D93BACCB26D143240094ADD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D93BACD026D143240094ADD9 /* GECalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GECalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93BACD326D143240094ADD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93BACD826D143240094ADD9 /* GECalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GECalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93BACDA26D143240094ADD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93BACDB26D143240094ADD9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		D9E019AA26D38828005C7736 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
+		D9E019AF26D390A5005C7736 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D9E019B026D390A5005C7736 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9E019B626D3BD45005C7736 /* GECalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarView.swift; sourceTree = "<group>"; };
+		D9E019B926D3BD6E005C7736 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		D9E019BC26D3BD99005C7736 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		D9E019C126D3BDB1005C7736 /* Calendar+generate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+generate.swift"; sourceTree = "<group>"; };
+		D9E019C726D3CE2E005C7736 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		D9E019CD26D3E0E4005C7736 /* ShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeModifier.swift; sourceTree = "<group>"; };
+		D9E01A0526D4A8A4005C7736 /* GECalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarView.swift; sourceTree = "<group>"; };
+		D9E01A0726D4A8C4005C7736 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		D9E01A0926D4A8CD005C7736 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D9FD9F7426D625E800664757 /* GECalendarPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarPreview.swift; sourceTree = "<group>"; };
+		D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarPreview.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D93BACCD26D143240094ADD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93BACD526D143240094ADD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D93BACC326D143220094ADD9 = {
+			isa = PBXGroup;
+			children = (
+				D93BACC826D143220094ADD9 /* Shared */,
+				D93BACD226D143240094ADD9 /* iOS */,
+				D93BACD926D143240094ADD9 /* macOS */,
+				D93BACD126D143240094ADD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D93BACC826D143220094ADD9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019CC26D3E0DC005C7736 /* Modifier */,
+				D9E019C526D3CD12005C7736 /* Pager */,
+				D9E019C626D3CD22005C7736 /* Model */,
+				D9E019CB26D3DB74005C7736 /* Extension */,
+				D9E019CA26D3DB6F005C7736 /* Application */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D93BACD126D143240094ADD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D93BACD026D143240094ADD9 /* GECalendarApp.app */,
+				D93BACD826D143240094ADD9 /* GECalendarApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D93BACD226D143240094ADD9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019C426D3CD0C005C7736 /* View */,
+				D93BACD326D143240094ADD9 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		D93BACD926D143240094ADD9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				D9E01A1026D4A902005C7736 /* View */,
+				D93BACDA26D143240094ADD9 /* Info.plist */,
+				D93BACDB26D143240094ADD9 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		D9E019C426D3CD0C005C7736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019BC26D3BD99005C7736 /* WeekView.swift */,
+				D9E019B926D3BD6E005C7736 /* MonthView.swift */,
+				D9E019AF26D390A5005C7736 /* CalendarView.swift */,
+				D9E019B626D3BD45005C7736 /* GECalendarView.swift */,
+				D9FD9F7426D625E800664757 /* GECalendarPreview.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9E019C526D3CD12005C7736 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019AA26D38828005C7736 /* PagerView.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		D9E019C626D3CD22005C7736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019C726D3CE2E005C7736 /* Appearance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9E019CA26D3DB6F005C7736 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019B026D390A5005C7736 /* ContentView.swift */,
+				D93BACC926D143220094ADD9 /* GECalendaDemoApp.swift */,
+				D93BACCB26D143240094ADD9 /* Assets.xcassets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D9E019CB26D3DB74005C7736 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019C126D3BDB1005C7736 /* Calendar+generate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9E019CC26D3E0DC005C7736 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				D9E019CD26D3E0E4005C7736 /* ShapeModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		D9E01A1026D4A902005C7736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9E01A0926D4A8CD005C7736 /* WeekView.swift */,
+				D9E01A0726D4A8C4005C7736 /* MonthView.swift */,
+				D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */,
+				D9E01A0526D4A8A4005C7736 /* GECalendarView.swift */,
+				D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D93BACCF26D143240094ADD9 /* GECalendarApp (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93BACE426D143240094ADD9 /* Build configuration list for PBXNativeTarget "GECalendarApp (iOS)" */;
+			buildPhases = (
+				D93BACCC26D143240094ADD9 /* Sources */,
+				D93BACCD26D143240094ADD9 /* Frameworks */,
+				D93BACCE26D143240094ADD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GECalendarApp (iOS)";
+			productName = "GECalendaDemo (iOS)";
+			productReference = D93BACD026D143240094ADD9 /* GECalendarApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D93BACD726D143240094ADD9 /* GECalendarApp (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93BACE726D143240094ADD9 /* Build configuration list for PBXNativeTarget "GECalendarApp (macOS)" */;
+			buildPhases = (
+				D93BACD426D143240094ADD9 /* Sources */,
+				D93BACD526D143240094ADD9 /* Frameworks */,
+				D93BACD626D143240094ADD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GECalendarApp (macOS)";
+			productName = "GECalendaDemo (macOS)";
+			productReference = D93BACD826D143240094ADD9 /* GECalendarApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D93BACC426D143220094ADD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D93BACCF26D143240094ADD9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					D93BACD726D143240094ADD9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = D93BACC726D143220094ADD9 /* Build configuration list for PBXProject "GECalendarApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D93BACC326D143220094ADD9;
+			productRefGroup = D93BACD126D143240094ADD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D93BACCF26D143240094ADD9 /* GECalendarApp (iOS) */,
+				D93BACD726D143240094ADD9 /* GECalendarApp (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D93BACCE26D143240094ADD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93BACE026D143240094ADD9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93BACD626D143240094ADD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93BACE126D143240094ADD9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D93BACCC26D143240094ADD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E019C226D3BDB1005C7736 /* Calendar+generate.swift in Sources */,
+				D9E019C826D3CE2E005C7736 /* Appearance.swift in Sources */,
+				D9E019CE26D3E0E4005C7736 /* ShapeModifier.swift in Sources */,
+				D9E019B726D3BD45005C7736 /* GECalendarView.swift in Sources */,
+				D9E019BA26D3BD6E005C7736 /* MonthView.swift in Sources */,
+				D9E019AB26D38828005C7736 /* PagerView.swift in Sources */,
+				D9E019BD26D3BD9A005C7736 /* WeekView.swift in Sources */,
+				D9FD9F7526D625E800664757 /* GECalendarPreview.swift in Sources */,
+				D9E019B126D390A5005C7736 /* CalendarView.swift in Sources */,
+				D93BACDC26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */,
+				D9E019B326D390A5005C7736 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93BACD426D143240094ADD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E01A0A26D4A8CE005C7736 /* WeekView.swift in Sources */,
+				D9E01A0C26D4A8DE005C7736 /* CalendarView.swift in Sources */,
+				D9E01A0626D4A8A4005C7736 /* GECalendarView.swift in Sources */,
+				D9E01A0826D4A8C4005C7736 /* MonthView.swift in Sources */,
+				D9FD9F9F26D6560900664757 /* ShapeModifier.swift in Sources */,
+				D9E01A1526D4D7F2005C7736 /* Appearance.swift in Sources */,
+				D9E019C326D3BDB1005C7736 /* Calendar+generate.swift in Sources */,
+				D9FD9F7726D6517E00664757 /* GECalendarPreview.swift in Sources */,
+				D9E019B426D390A5005C7736 /* ContentView.swift in Sources */,
+				D9E01A1426D4A953005C7736 /* PagerView.swift in Sources */,
+				D93BACDD26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D93BACE226D143240094ADD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D93BACE326D143240094ADD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D93BACE526D143240094ADD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.GECalendarApp;
+				PRODUCT_NAME = GECalendarApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D93BACE626D143240094ADD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.GECalendarApp;
+				PRODUCT_NAME = GECalendarApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D93BACE826D143240094ADD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.GECalendarApp;
+				PRODUCT_NAME = GECalendarApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D93BACE926D143240094ADD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C2JSJLJ4FN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeonggo.GECalendarApp;
+				PRODUCT_NAME = GECalendarApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D93BACC726D143220094ADD9 /* Build configuration list for PBXProject "GECalendarApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93BACE226D143240094ADD9 /* Debug */,
+				D93BACE326D143240094ADD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93BACE426D143240094ADD9 /* Build configuration list for PBXNativeTarget "GECalendarApp (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93BACE526D143240094ADD9 /* Debug */,
+				D93BACE626D143240094ADD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93BACE726D143240094ADD9 /* Build configuration list for PBXNativeTarget "GECalendarApp (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93BACE826D143240094ADD9 /* Debug */,
+				D93BACE926D143240094ADD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D93BACC426D143220094ADD9 /* Project object */;
+}
