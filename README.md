@@ -24,7 +24,7 @@ SwiftUI iOS & MacOS Calendar
 | <img align="left" width="700" src="./images/OSX/two.png">   | <img align="left" width="700" src="./images/OSX/one.png">  |
 | <img align="left" width="700" src="./images/OSX/three.png"> | <img align="left" width="700" src="./images/OSX/four.png"> |
 
-You can look this views at the [GECalendarApp]'s GECalendarPreviews.
+You can look this views at the [GECalendarApp](https://github.com/Goeun1001/GECalendar/tree/master/Demo/GECalendarApp)'s GECalendarPreviews.
 
 ## Usage
 
@@ -37,7 +37,7 @@ struct ContentView: View {
 }
 ```
 
-You can manage settings with GECalendar's [Appearance].
+You can manage settings with GECalendar's [Appearance](https://github.com/Goeun1001/GECalendar/blob/master/Sources/GECalendar/Shared/Appearance.swift).
 
 ## Installation
 

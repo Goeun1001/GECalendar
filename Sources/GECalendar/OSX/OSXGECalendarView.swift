@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+@available(macOS 11, *)
 public struct GECalendar: View {
     @Environment(\.calendar) var calendar
     private var quarter: DateInterval {

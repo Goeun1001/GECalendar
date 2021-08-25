@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+#if os(iOS) || os(OSX)
+
 public enum HeaderType {
     case leading
     case center
@@ -32,6 +34,7 @@ public enum ShapeType {
     case rectangle
 }
 
+@available(iOS 14, macOS 11, *)
 public class Appearance: ObservableObject {
     // MARK: - Event
     @Published var events: [Date] = [] // 이벤트 배열
@@ -246,3 +249,5 @@ public class Appearance: ObservableObject {
     }
     #endif
 }
+
+#endif

@@ -11,6 +11,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 class CalendarViewModel: ObservableObject {
     @Environment(\.calendar) var calendar
     

@@ -7,6 +7,8 @@
 
 import Foundation
 
+#if os(iOS) || os(OSX)
+
 extension Calendar {
     public func generateDates(
         inside interval: DateInterval,
@@ -32,3 +34,5 @@ extension Calendar {
         return dates
     }
 }
+
+#endif

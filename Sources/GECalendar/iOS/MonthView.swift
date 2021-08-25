@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+@available(iOS 14, *)
 struct MonthView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
     @EnvironmentObject var appearance: Appearance

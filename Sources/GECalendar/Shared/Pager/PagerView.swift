@@ -9,6 +9,8 @@
 
 import SwiftUI
 
+#if os(iOS) || os(OSX)
+
 /// SwiftUI view that displays contained children in pages, like a  `UIPageViewController` in UIKit.
 ///
 /// Parameters to initialize:
@@ -68,3 +70,5 @@ struct PagerView<Content: View>: View {
         }
     }
 }
+
+#endif

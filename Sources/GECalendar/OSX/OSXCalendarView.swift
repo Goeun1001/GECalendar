@@ -52,7 +52,7 @@ class CalendarViewModel: ObservableObject {
     }
 }
 
-
+@available(macOS 11, *)
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
     @EnvironmentObject var appearance: Appearance

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+#if os(iOS) || os(OSX)
+
+@available(iOS 14, macOS 11, *)
 public struct ShapeModifier: ViewModifier {
     let shape: ShapeType?
       
@@ -25,3 +28,5 @@ public struct ShapeModifier: ViewModifier {
     }
       
 }
+
+#endif
