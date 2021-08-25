@@ -18,8 +18,6 @@ Pod::Spec.new do |spec|
   spec.author             = { "Goeun1001" => "gogo8272@gmail.com" }
   spec.ios.deployment_target = '14.0'
   spec.osx.deployment_target = '11.0'
-  spec.ios.source_files   = 'Sources/GECalendar/iOS/*.swift'
-  spec.osx.source_files   = 'Sources/GECalendar/OSX/*.swift'
   spec.source       = { :git => "https://github.com/Goeun1001/GECalendar.git", :tag => "#{spec.version}" }
   spec.source_files  = "Sources/*", "Sources/**/*"
 end

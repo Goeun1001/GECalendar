@@ -8,21 +8,55 @@
 
 SwiftUI iOS & MacOS Calendar
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 
 - iOS 14.0+, MacOS 11.0+
 - Swift 5.0+
 
+## Screenshots
+
+| iOS                                                         |                                                           |                                                           |                                                            |
+| ----------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| <img align="left" width="400" src="./images/iOS/three.png"> | <img align="left" width="400" src="./images/iOS/two.png"> | <img align="left" width="400" src="./images/iOS/one.png"> | <img align="left" width="400" src="./images/iOS/four.png"> |
+
+| macOS                                                       |                                                            |
+| ----------------------------------------------------------- | ---------------------------------------------------------- |
+| <img align="left" width="700" src="./images/OSX/two.png">   | <img align="left" width="700" src="./images/OSX/one.png">  |
+| <img align="left" width="700" src="./images/OSX/three.png"> | <img align="left" width="700" src="./images/OSX/four.png"> |
+
+You can look this views at the [GECalendarApp]'s GECalendarPreviews.
+
+## Usage
+
+```swift
+struct ContentView: View {
+    @State var date: Date? = Date()
+    var body: some View {
+        GECalendar(selectedDate: $date, appearance: Appearance())
+    }
+}
+```
+
+You can manage settings with GECalendar's [Appearance].
+
 ## Installation
 
-GEmojiPicker is available through [CocoaPods](https://cocoapods.org/). To install it, simply add the following line to your Podfile:
+### CocoaPods
 
 ```
 pod 'GECalendar'
+```
+
+### Carthage
+
+```
+github "Goeun1001/GECalendar"
+```
+
+### SPM
+
+```
+.package(url: "https://github.com/Goeun1001/GECalendar.git", from: "1.0.0")
 ```
 
 ## Author
@@ -35,4 +69,4 @@ GECalendar is available under the MIT license. See the LICENSE file for more inf
 
 ## Reference
 
-- Started from https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec/9169b0293f709bb1f560de2ca8184ea903fd5116
+- Started from [Building calendar without UICollectionView in SwiftUI](https://swiftwithmajid.com/2020/05/06/building-calendar-without-uicollectionview-in-swiftui/)
