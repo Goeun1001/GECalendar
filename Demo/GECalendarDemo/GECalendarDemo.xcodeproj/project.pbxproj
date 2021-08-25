@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB1850318B18104157146C6 /* Pods_GECalendarDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D94CDDA4EF82E6E318FCB4 /* Pods_GECalendarDemo__iOS_.framework */; };
+		6990E3E38EFE22FFADB185A7 /* Pods_GECalendarDemo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDABFAB20943DD8AE2CD65EC /* Pods_GECalendarDemo__macOS_.framework */; };
 		D9FD9F9126D6529000664757 /* GECalendarDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7E26D6528900664757 /* GECalendarDemoApp.swift */; };
 		D9FD9F9226D6529000664757 /* GECalendarDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7E26D6528900664757 /* GECalendarDemoApp.swift */; };
 		D9FD9F9326D6529000664757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7F26D6528900664757 /* ContentView.swift */; };
 		D9FD9F9426D6529000664757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7F26D6528900664757 /* ContentView.swift */; };
 		D9FD9F9526D6529000664757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9FD9F8026D6529000664757 /* Assets.xcassets */; };
 		D9FD9F9626D6529000664757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9FD9F8026D6529000664757 /* Assets.xcassets */; };
+		D9FD9FAE26D67E8B00664757 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9FAD26D67E7F00664757 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37D94CDDA4EF82E6E318FCB4 /* Pods_GECalendarDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GECalendarDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39721782CCF5C7CFF311CE12 /* Pods-GECalendarDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GECalendarDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-GECalendarDemo (macOS)/Pods-GECalendarDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		72EF117F994F8FB202E2B328 /* Pods-GECalendarDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GECalendarDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-GECalendarDemo (iOS)/Pods-GECalendarDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		7466F54AB090102BAB346507 /* Pods-GECalendarDemo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GECalendarDemo (iOS).release.xcconfig"; path = "Target Support Files/Pods-GECalendarDemo (iOS)/Pods-GECalendarDemo (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		BDDCAE8064D3523052EF208A /* Pods-GECalendarDemo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GECalendarDemo (macOS).release.xcconfig"; path = "Target Support Files/Pods-GECalendarDemo (macOS)/Pods-GECalendarDemo (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		CDABFAB20943DD8AE2CD65EC /* Pods_GECalendarDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GECalendarDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FD9F7E26D6528900664757 /* GECalendarDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarDemoApp.swift; sourceTree = "<group>"; };
 		D9FD9F7F26D6528900664757 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9FD9F8026D6529000664757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		D9FD9F8D26D6529000664757 /* GECalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GECalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FD9F8F26D6529000664757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9FD9F9026D6529000664757 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		D9FD9FAD26D67E7F00664757 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB1850318B18104157146C6 /* Pods_GECalendarDemo__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,12 +49,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6990E3E38EFE22FFADB185A7 /* Pods_GECalendarDemo__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F7D70B8583DDA542921AE35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72EF117F994F8FB202E2B328 /* Pods-GECalendarDemo (iOS).debug.xcconfig */,
+				7466F54AB090102BAB346507 /* Pods-GECalendarDemo (iOS).release.xcconfig */,
+				39721782CCF5C7CFF311CE12 /* Pods-GECalendarDemo (macOS).debug.xcconfig */,
+				BDDCAE8064D3523052EF208A /* Pods-GECalendarDemo (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6D395EA28EDE0B381A274A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D94CDDA4EF82E6E318FCB4 /* Pods_GECalendarDemo__iOS_.framework */,
+				CDABFAB20943DD8AE2CD65EC /* Pods_GECalendarDemo__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9FD9F7826D6528800664757 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +83,8 @@
 				D9FD9F8726D6529000664757 /* iOS */,
 				D9FD9F8E26D6529000664757 /* macOS */,
 				D9FD9F8626D6529000664757 /* Products */,
+				5F7D70B8583DDA542921AE35 /* Pods */,
+				C6D395EA28EDE0B381A274A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FD9F8F26D6529000664757 /* Info.plist */,
+				D9FD9FAD26D67E7F00664757 /* SwiftUIView.swift */,
 				D9FD9F9026D6529000664757 /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -97,6 +132,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9FD9F9926D6529000664757 /* Build configuration list for PBXNativeTarget "GECalendarDemo (iOS)" */;
 			buildPhases = (
+				4E3E4274B363EC242AC162FC /* [CP] Check Pods Manifest.lock */,
 				D9FD9F8126D6529000664757 /* Sources */,
 				D9FD9F8226D6529000664757 /* Frameworks */,
 				D9FD9F8326D6529000664757 /* Resources */,
@@ -106,6 +142,8 @@
 			dependencies = (
 			);
 			name = "GECalendarDemo (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "GECalendarDemo (iOS)";
 			productReference = D9FD9F8526D6529000664757 /* GECalendarDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +152,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9FD9F9C26D6529000664757 /* Build configuration list for PBXNativeTarget "GECalendarDemo (macOS)" */;
 			buildPhases = (
+				020D8E848868D02ED3741BC1 /* [CP] Check Pods Manifest.lock */,
 				D9FD9F8926D6529000664757 /* Sources */,
 				D9FD9F8A26D6529000664757 /* Frameworks */,
 				D9FD9F8B26D6529000664757 /* Resources */,
@@ -153,6 +192,8 @@
 				Base,
 			);
 			mainGroup = D9FD9F7826D6528800664757;
+			packageReferences = (
+			);
 			productRefGroup = D9FD9F8626D6529000664757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,6 +223,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		020D8E848868D02ED3741BC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GECalendarDemo (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E3E4274B363EC242AC162FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GECalendarDemo (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9FD9F8126D6529000664757 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,6 +286,7 @@
 			files = (
 				D9FD9F9426D6529000664757 /* ContentView.swift in Sources */,
 				D9FD9F9226D6529000664757 /* GECalendarDemoApp.swift in Sources */,
+				D9FD9FAE26D67E8B00664757 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +406,7 @@
 		};
 		D9FD9F9A26D6529000664757 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72EF117F994F8FB202E2B328 /* Pods-GECalendarDemo (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +429,7 @@
 		};
 		D9FD9F9B26D6529000664757 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7466F54AB090102BAB346507 /* Pods-GECalendarDemo (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +453,7 @@
 		};
 		D9FD9F9D26D6529000664757 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39721782CCF5C7CFF311CE12 /* Pods-GECalendarDemo (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +478,7 @@
 		};
 		D9FD9F9E26D6529000664757 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDCAE8064D3523052EF208A /* Pods-GECalendarDemo (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import GECalendar
 
 struct ContentView: View {
+    @State var date: Date? = Date()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GECalendar(selectedDate: $date, appearance: Appearance())
     }
 }
 
