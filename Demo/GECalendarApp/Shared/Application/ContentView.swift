@@ -11,11 +11,12 @@ struct ContentView: View {
     @State var date: Date? = nil
     var body: some View {
         #if os(iOS)
-        GECalendar(selectedDate: $date, appearance:  Appearance())
+        GEWeekView(selectedDate: $date, appearance: Appearance())
+//        GECalendar(selectedDate: $date, appearance:  Appearance())
         #endif
         
         #if os(OSX)
-        GECalendar(selectedDate: $date, appearance: Appearance())
+        GEWeekView(selectedDate: $date, appearance: Appearance())
         #endif
     }
 }

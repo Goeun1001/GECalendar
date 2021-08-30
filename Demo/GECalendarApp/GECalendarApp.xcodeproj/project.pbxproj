@@ -11,6 +11,8 @@
 		D93BACDD26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93BACC926D143220094ADD9 /* GECalendaDemoApp.swift */; };
 		D93BACE026D143240094ADD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93BACCB26D143240094ADD9 /* Assets.xcassets */; };
 		D93BACE126D143240094ADD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93BACCB26D143240094ADD9 /* Assets.xcassets */; };
+		D965F98F26DCC77B00B3F3FB /* GEWeekViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC989426DCC2FE00735222 /* GEWeekViewPreview.swift */; };
+		D965F99126DCC79C00B3F3FB /* GEWeekViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F99026DCC79C00B3F3FB /* GEWeekViewPreview.swift */; };
 		D9E019AB26D38828005C7736 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AA26D38828005C7736 /* PagerView.swift */; };
 		D9E019B126D390A5005C7736 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AF26D390A5005C7736 /* CalendarView.swift */; };
 		D9E019B326D390A5005C7736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019B026D390A5005C7736 /* ContentView.swift */; };
@@ -28,6 +30,8 @@
 		D9E01A0C26D4A8DE005C7736 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */; };
 		D9E01A1426D4A953005C7736 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019AA26D38828005C7736 /* PagerView.swift */; };
 		D9E01A1526D4D7F2005C7736 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019C726D3CE2E005C7736 /* Appearance.swift */; };
+		D9FC989026DC9BFF00735222 /* GEWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC988F26DC9BFF00735222 /* GEWeekView.swift */; };
+		D9FC989326DCC02000735222 /* GEWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FC989126DCC01E00735222 /* GEWeekView.swift */; };
 		D9FD9F7526D625E800664757 /* GECalendarPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7426D625E800664757 /* GECalendarPreview.swift */; };
 		D9FD9F7726D6517E00664757 /* GECalendarPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */; };
 		D9FD9F9F26D6560900664757 /* ShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E019CD26D3E0E4005C7736 /* ShapeModifier.swift */; };
@@ -41,6 +45,7 @@
 		D93BACD826D143240094ADD9 /* GECalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GECalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93BACDA26D143240094ADD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93BACDB26D143240094ADD9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		D965F99026DCC79C00B3F3FB /* GEWeekViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEWeekViewPreview.swift; sourceTree = "<group>"; };
 		D9E019AA26D38828005C7736 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 		D9E019AF26D390A5005C7736 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		D9E019B026D390A5005C7736 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		D9E01A0726D4A8C4005C7736 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		D9E01A0926D4A8CD005C7736 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D9FC988F26DC9BFF00735222 /* GEWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEWeekView.swift; sourceTree = "<group>"; };
+		D9FC989126DCC01E00735222 /* GEWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEWeekView.swift; sourceTree = "<group>"; };
+		D9FC989426DCC2FE00735222 /* GEWeekViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEWeekViewPreview.swift; sourceTree = "<group>"; };
 		D9FD9F7426D625E800664757 /* GECalendarPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarPreview.swift; sourceTree = "<group>"; };
 		D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GECalendarPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,10 +138,12 @@
 			isa = PBXGroup;
 			children = (
 				D9E019BC26D3BD99005C7736 /* WeekView.swift */,
+				D9FC988F26DC9BFF00735222 /* GEWeekView.swift */,
 				D9E019B926D3BD6E005C7736 /* MonthView.swift */,
 				D9E019AF26D390A5005C7736 /* CalendarView.swift */,
 				D9E019B626D3BD45005C7736 /* GECalendarView.swift */,
 				D9FD9F7426D625E800664757 /* GECalendarPreview.swift */,
+				D965F99026DCC79C00B3F3FB /* GEWeekViewPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				D9E01A0B26D4A8DE005C7736 /* CalendarView.swift */,
 				D9E01A0526D4A8A4005C7736 /* GECalendarView.swift */,
 				D9FD9F7626D6517E00664757 /* GECalendarPreview.swift */,
+				D9FC989126DCC01E00735222 /* GEWeekView.swift */,
+				D9FC989426DCC2FE00735222 /* GEWeekViewPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,7 +310,9 @@
 				D9E019BD26D3BD9A005C7736 /* WeekView.swift in Sources */,
 				D9FD9F7526D625E800664757 /* GECalendarPreview.swift in Sources */,
 				D9E019B126D390A5005C7736 /* CalendarView.swift in Sources */,
+				D965F99126DCC79C00B3F3FB /* GEWeekViewPreview.swift in Sources */,
 				D93BACDC26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */,
+				D9FC989026DC9BFF00735222 /* GEWeekView.swift in Sources */,
 				D9E019B326D390A5005C7736 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +330,9 @@
 				D9E019C326D3BDB1005C7736 /* Calendar+generate.swift in Sources */,
 				D9FD9F7726D6517E00664757 /* GECalendarPreview.swift in Sources */,
 				D9E019B426D390A5005C7736 /* ContentView.swift in Sources */,
+				D965F98F26DCC77B00B3F3FB /* GEWeekViewPreview.swift in Sources */,
 				D9E01A1426D4A953005C7736 /* PagerView.swift in Sources */,
+				D9FC989326DCC02000735222 /* GEWeekView.swift in Sources */,
 				D93BACDD26D143240094ADD9 /* GECalendaDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
