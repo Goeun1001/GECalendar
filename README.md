@@ -37,6 +37,15 @@ struct ContentView: View {
 }
 ```
 
+```swift
+struct ContentView: View {
+    @State var date: Date? = Date()
+    var body: some View {
+        GEWeekView(selectedDate: $date, appearance: Appearance())
+    }
+}
+```
+
 You can manage settings with GECalendar's [Appearance](https://github.com/Goeun1001/GECalendar/blob/master/Sources/GECalendar/Shared/Appearance.swift).
 
 ## Installation
