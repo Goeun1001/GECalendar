@@ -167,6 +167,21 @@ public struct GEWeekView: View {
                 header
             }
             
+            HStack{
+                ForEach(0..<7, id: \.self) {index in
+                    Text("00")
+                        .hidden()
+                        .padding(8)
+                        .clipShape(Circle())
+                        .padding(.horizontal, 4)
+                        .overlay(
+                            Text(appearance.weekDayFormatter.shortWeekdaySymbols[index])
+                                .foregroundColor(appearance.weekDayColor)
+                                .font(appearance.weekDayFont)
+                        )
+                }
+            }
+            
             PagerView(pageCount: self.weekVM.weeks.count, currentIndex: self.$currentPage, pageChanged: self.updateMonthsAfterPagerSwipe) {
                 ForEach(weekVM.weeks, id: \.self) {
                     week in

@@ -292,6 +292,7 @@ public struct GEWeekView: View {
                         }).environmentObject(appearance)
                     }
                 }
+                .frame(width: geo.size.width)
             }
         }
     }

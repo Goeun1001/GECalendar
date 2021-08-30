@@ -34,14 +34,14 @@ class WeekViewModel: ObservableObject {
         //        print("from: \(self.months)")
         if newIndex == 0 {
             // left
-            if let date = Calendar.current.date(byAdding: .weekOfMonth, value: -1, to: weeks[0]) {
+            if let date = Calendar.current.date(byAdding: .weekdayOrdinal, value: -1, to: weeks[0]) {
                 self.weeks[2] = self.weeks[1]
                 self.weeks[1] = self.weeks[0]
                 self.weeks[0] = date
             }
         } else {
             // right
-            if let date = Calendar.current.date(byAdding: .weekOfMonth, value: 1, to: weeks[2]) {
+            if let date = Calendar.current.date(byAdding: .weekdayOrdinal, value: 1, to: weeks[2]) {
                 self.weeks[0] = self.weeks[1]
                 self.weeks[1] = self.weeks[2]
                 self.weeks[2] = date
@@ -50,10 +50,18 @@ class WeekViewModel: ObservableObject {
     }
     
     func today() {
-        self.weeks = calendar.generateDates(
-            inside: calendar.dateInterval(of: .weekOfMonth, for: Date())!,
+        self.weeks[0] = calendar.generateDates(
+            inside: calendar.dateInterval(of: .weekdayOrdinal, for: Calendar.current.date(byAdding: .weekdayOrdinal, value: -1, to: Date())!)!,
             matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
-        )
+        ).first!
+        self.weeks[1] = calendar.generateDates(
+            inside: calendar.dateInterval(of: .weekdayOrdinal, for: Date())!,
+            matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
+        ).first!
+        self.weeks[2] = calendar.generateDates(
+            inside: calendar.dateInterval(of: .weekdayOrdinal, for: Calendar.current.date(byAdding: .weekdayOrdinal, value: 1, to: Date())!)!,
+            matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
+        ).first!
     }
 }
 
@@ -296,6 +304,7 @@ public struct GEWeekView: View {
                         }).environmentObject(appearance)
                     }
                 }
+                .frame(width: geo.size.width)
             }
         }
     }
