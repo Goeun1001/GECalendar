@@ -19,6 +19,12 @@ public struct Event: Hashable {
     var date: Date
     var title: String
     var color: Color
+    
+    public init(date: Date, title: String, color: Color) {
+        self.date = date
+        self.title = title
+        self.color = color
+    }
 }
 
 public enum EventType {
