@@ -24,7 +24,7 @@ class CalendarViewModel: ObservableObject {
     }
     
     func changeDateBy(_ newIndex: Int) {
-        print("from: \(self.months)")
+//        print("from: \(self.months)")
         if newIndex == 0 {
             // left
             if let date = Calendar.current.date(byAdding: .month, value: -1, to: months[0]) {
@@ -41,7 +41,7 @@ class CalendarViewModel: ObservableObject {
                 self.months[2] = date
             }
         }
-        print("to: \(self.months)")
+//        print("to: \(self.months)")
     }
     
     func today() {
