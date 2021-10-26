@@ -43,57 +43,57 @@ public enum ShapeType {
 @available(iOS 14, macOS 11, *)
 public class Appearance: ObservableObject {
     // MARK: - Event
-    @Published var events: [Date] = [] // 이벤트 배열
-    @Published var eventType: EventType = .line // 이벤트 표시 타입
-    @Published var eventColor: Color = Color.gray // 이벤트 표시 타입
+    @Published public var events: [Date] = [] // 이벤트 배열
+    @Published public var eventType: EventType = .line // 이벤트 표시 타입
+    @Published public var eventColor: Color = Color.gray // 이벤트 표시 타입
     
-    @Published var selectionShape: ShapeType? = .circle  // 선택된 날짜 표시 타입
-    @Published var defaultShape: ShapeType? = nil  // 기본 날짜 표시 타입
+    @Published public var selectionShape: ShapeType? = .circle  // 선택된 날짜 표시 타입
+    @Published public var defaultShape: ShapeType? = nil  // 기본 날짜 표시 타입
     
-    @Published var multipleEvents: [Event] = [] // 여러 이벤트 설명 배열
+    @Published public var multipleEvents: [Event] = [] // 여러 이벤트 설명 배열
     
     // MARK: - Size
-    @Published var osxMaxWidth: CGFloat? = nil // macOS의 날짜 최대 크기
-    @Published var osxMaxHeight: CGFloat? = nil // macOS의 날짜 최대 크기
+    @Published public var osxMaxWidth: CGFloat? = nil // macOS의 날짜 최대 크기
+    @Published public var osxMaxHeight: CGFloat? = nil // macOS의 날짜 최대 크기
     
     // MARK: - Bool
-    @Published var isHeader: Bool = true // 헤더 표시할 건지
-    @Published var isTodayButton: Bool = true // 오늘로 돌아가는 버튼 표시할건지
-    @Published var isMultipleEvents: Bool = false // 이벤트가 여러 개 표시될건지
+    @Published public var isHeader: Bool = true // 헤더 표시할 건지
+    @Published public var isTodayButton: Bool = true // 오늘로 돌아가는 버튼 표시할건지
+    @Published public var isMultipleEvents: Bool = false // 이벤트가 여러 개 표시될건지
     
     // MARK: - Color
-    @Published var selectionColor: Color = Color.blue  // 선택된 날짜 색
-    @Published var todayColor: Color = Color.blue.opacity(0.2) // 오늘의 날짜 색
-    @Published var defaultColor: Color = Color.clear // 선택되지 않은 날짜 색
-    @Published var headerColor: Color = Color.white // 헤더 컬러
-    @Published var weekDayColor: Color = Color.white // 주 컬러
-    @Published var dayColor: Color = Color.white // 일 색상
-    @Published var extraDayOpacity: Double = 0.2 // 다른 달의 일 투명도
+    @Published public var selectionColor: Color = Color.blue  // 선택된 날짜 색
+    @Published public var todayColor: Color = Color.blue.opacity(0.2) // 오늘의 날짜 색
+    @Published public var defaultColor: Color = Color.clear // 선택되지 않은 날짜 색
+    @Published public var headerColor: Color = Color.white // 헤더 컬러
+    @Published public var weekDayColor: Color = Color.white // 주 컬러
+    @Published public var dayColor: Color = Color.white // 일 색상
+    @Published public var extraDayOpacity: Double = 0.2 // 다른 달의 일 투명도
     
     // MARK: - Font
-    @Published var headerFont: Font = .title // 헤더 폰트
-    @Published var weekDayFont: Font = .body // 주 폰트
-    @Published var dayFont: Font = .body // 바디 폰트
+    @Published public var headerFont: Font = .title // 헤더 폰트
+    @Published public var weekDayFont: Font = .body // 주 폰트
+    @Published public var dayFont: Font = .body // 바디 폰트
     
     // MARK: - Header
-    @Published var headerLeftButtonImage: Image = Image(systemName: "chevron.left") // 헤더 왼쪽 버튼 이미지
-    @Published var headerTodayButtonImage: Image = Image(systemName: "dot.square") // 헤더 투데이 버튼 이미지
-    @Published var headerRightButtonImage: Image = Image(systemName: "chevron.right") // 헤더 왼쪽 버튼 이미지
-    @Published var headerType: HeaderType = .center
+    @Published public var headerLeftButtonImage: Image = Image(systemName: "chevron.left") // 헤더 왼쪽 버튼 이미지
+    @Published public var headerTodayButtonImage: Image = Image(systemName: "dot.square") // 헤더 투데이 버튼 이미지
+    @Published public var headerRightButtonImage: Image = Image(systemName: "chevron.right") // 헤더 왼쪽 버튼 이미지
+    @Published public var headerType: HeaderType = .center
     
     // MARK:-  Local & DateFormatter
-    @Published var locale: Locale = Locale(identifier: "ko-KR") // locale
-    @Published var headerDateFormatter: DateFormatter = {
+    @Published public var locale: Locale = Locale(identifier: "ko-KR") // locale
+    @Published public var headerDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM"
         return formatter
     }() // 헤더 날짜 포매터
-    @Published var weekDayFormatter: DateFormatter = {
+    @Published public var weekDayFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEEE"
         return formatter
     }() // 주 날짜 포매터
-    @Published var dayFormatter: DateFormatter = {
+    @Published public var dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "d"
         return formatter
