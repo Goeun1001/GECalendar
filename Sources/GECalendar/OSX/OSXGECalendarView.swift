@@ -17,11 +17,14 @@ public struct GECalendar: View {
     }
     @Binding private var selectedDate: Date?
     @ObservedObject var appearance: Appearance
+    private let onChanged: (Date) -> ()
     
     public init(selectedDate: Binding<Date?>,
-                appearance: Appearance) {
+                appearance: Appearance,
+                onChanged: @escaping (Date) -> () = { _ in }) {
         self._selectedDate = selectedDate
         self.appearance = appearance
+        self.onChanged = onChanged
     }
     
     public var body: some View {
