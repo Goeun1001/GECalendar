@@ -29,7 +29,7 @@ public struct GECalendar: View {
     
     public var body: some View {
         GeometryReader { geo in
-            CalendarView(interval: self.quarter) { date in
+            CalendarView(interval: self.quarter, onChanged: self.onChanged) { date in
                 Button(action: {
                     self.selectedDate = date
                 }, label: {
