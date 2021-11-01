@@ -57,7 +57,7 @@ class CalendarViewModel: ObservableObject {
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
     @EnvironmentObject var appearance: Appearance
-    @ObservedObject var calendarVM = CalendarViewModel()
+    @StateObject var calendarVM = CalendarViewModel()
     @State private var currentPage = 1
     
     private let interval: DateInterval

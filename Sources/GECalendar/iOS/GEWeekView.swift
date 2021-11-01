@@ -74,7 +74,7 @@ public struct GEWeekView: View {
     @Binding private var appearance: Appearance
     @Binding private var selectedDate: Date?
     
-    @ObservedObject private var weekVM = WeekViewModel()
+    @StateObject private var weekVM = WeekViewModel()
     @State private var currentPage = 1
     
     public init(selectedDate: Binding<Date?>,
