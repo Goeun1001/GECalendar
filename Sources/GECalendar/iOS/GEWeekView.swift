@@ -18,6 +18,7 @@ class WeekViewModel: ObservableObject {
     private let onChanged: (Date) -> ()
     
     init(onChanged: @escaping (Date) -> () = { _ in }) {
+        self.onChanged = onChanged
         self.weeks[0] = calendar.generateDates(
             inside: calendar.dateInterval(of: .weekdayOrdinal, for: Calendar.current.date(byAdding: .weekdayOrdinal, value: -1, to: Date())!)!,
             matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
