@@ -71,17 +71,17 @@ class WeekViewModel: ObservableObject {
 @available(macOS 11, *)
 public struct GEWeekView: View {
     @Environment(\.calendar) var calendar
-    @ObservedObject var appearance: Appearance
+    @Binding private var appearance: Appearance
     @Binding private var selectedDate: Date?
     
     @ObservedObject private var weekVM: WeekViewModel
     @State private var currentPage = 1
     
     public init(selectedDate: Binding<Date?>,
-                appearance: Appearance,
+                appearance: Binding<Appearance>,
                 onChanged: @escaping (Date) -> () = { _ in }) {
         self._selectedDate = selectedDate
-        self.appearance = appearance
+        self._appearance = appearance
         self.weekVM = WeekViewModel(onChanged: onChanged)
     }
     

@@ -17,7 +17,10 @@ class CalendarViewModel: ObservableObject {
     
     @Published var months = [Date]()
     
-    init() {
+    private let onChanged: (Date) -> ()
+    
+    init(onChanged: @escaping (Date) -> () = { _ in }) {
+        self.onChanged = onChanged
         self.months = calendar.generateDates(
             inside: calendar.dateInterval(of: .quarter, for: Date())!,
             matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
@@ -25,7 +28,6 @@ class CalendarViewModel: ObservableObject {
     }
     
     func changeDateBy(_ newIndex: Int) {
-//        print("from: \(self.months)")
         if newIndex == 0 {
             // left
             if let date = Calendar.current.date(byAdding: .month, value: -1, to: months[0]) {
@@ -42,7 +44,7 @@ class CalendarViewModel: ObservableObject {
                 self.months[2] = date
             }
         }
-//        print("to: \(self.months)")
+        self.onChanged(self.months[1])
     }
     
     func today() {
@@ -57,15 +59,18 @@ class CalendarViewModel: ObservableObject {
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
     @EnvironmentObject var appearance: Appearance
-    @ObservedObject var calendarVM = CalendarViewModel()
+    @ObservedObject var calendarVM: CalendarViewModel
     @State private var currentPage = 1
     
     private let interval: DateInterval
     private let content: (Date) -> DateView
     
-    init(interval: DateInterval, @ViewBuilder content: @escaping (Date) -> DateView) {
+    init(interval: DateInterval,
+         onChanged: @escaping (Date) -> () = { _ in },
+         @ViewBuilder content: @escaping (Date) -> DateView) {
         self.interval = interval
         self.content = content
+        self.calendarVM = CalendarViewModel(onChanged: onChanged)
     }
     
     func updateMonthsAfterPagerSwipe(newIndex:Int) {

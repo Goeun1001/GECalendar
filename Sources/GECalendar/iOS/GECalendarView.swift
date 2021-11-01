@@ -16,12 +16,15 @@ public struct GECalendar: View {
         calendar.dateInterval(of: .quarter, for:  Calendar.current.date(byAdding: .month, value: 1, to: Date())!)!
     }
     @Binding private var selectedDate: Date?
-    @ObservedObject var appearance: Appearance
+    @Binding private var appearance: Appearance
+    private let onChanged: (Date) -> ()
     
     public init(selectedDate: Binding<Date?>,
-                appearance: Appearance) {
+                appearance: Binding<Appearance>,
+                onChanged: @escaping (Date) -> () = { _ in }) {
         self._selectedDate = selectedDate
-        self.appearance = appearance
+        self._appearance = appearance
+        self.onChanged = onChanged
     }
     
     public var body: some View {
