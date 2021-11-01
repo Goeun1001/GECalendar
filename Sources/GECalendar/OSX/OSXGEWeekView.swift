@@ -15,10 +15,9 @@ class WeekViewModel: ObservableObject {
     
     @Published var weeks = [Date(), Date(), Date()]
     
-    private let onChanged: (Date) -> ()
+    public var onChanged: (Date) -> () = { _ in }
     
-    init(onChanged: @escaping (Date) -> () = { _ in }) {
-        self.onChanged = onChanged
+    init() {
         self.weeks[0] = calendar.generateDates(
             inside: calendar.dateInterval(of: .weekdayOrdinal, for: Calendar.current.date(byAdding: .weekdayOrdinal, value: -1, to: Date())!)!,
             matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
@@ -74,7 +73,7 @@ public struct GEWeekView: View {
     @Binding private var appearance: Appearance
     @Binding private var selectedDate: Date?
     
-    @ObservedObject private var weekVM: WeekViewModel
+    @ObservedObject private var weekVM = WeekViewModel()
     @State private var currentPage = 1
     
     public init(selectedDate: Binding<Date?>,
@@ -82,7 +81,7 @@ public struct GEWeekView: View {
                 onChanged: @escaping (Date) -> () = { _ in }) {
         self._selectedDate = selectedDate
         self._appearance = appearance
-        self.weekVM = WeekViewModel(onChanged: onChanged)
+        self.weekVM.onChanged = onChanged
     }
     
     private var header: some View {
