@@ -77,12 +77,14 @@ public struct GEWeekView: View {
     @StateObject private var weekVM = WeekViewModel()
     @State private var currentPage = 1
     
+    private let onChanged: (Date) -> ()
+    
     public init(selectedDate: Binding<Date?>,
                 appearance: Binding<Appearance>,
                 onChanged: @escaping (Date) -> () = { _ in }) {
         self._selectedDate = selectedDate
         self._appearance = appearance
-        self.weekVM.onChanged = onChanged
+        self.onChanged = onChanged
     }
     
     private var header: some View {
@@ -301,8 +303,9 @@ public struct GEWeekView: View {
                             )
                     }).environmentObject(appearance)
                 }
+            }.onAppear {
+                self.weekVM.onChanged = self.onChanged
             }
-            
         }
     }
 }

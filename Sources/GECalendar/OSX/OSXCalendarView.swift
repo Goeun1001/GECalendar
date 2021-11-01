@@ -61,6 +61,7 @@ struct CalendarView<DateView>: View where DateView: View {
     @State private var currentPage = 1
     
     private let interval: DateInterval
+    private let onChanged: (Date) -> ()
     private let content: (Date) -> DateView
     
     init(interval: DateInterval,
@@ -68,7 +69,7 @@ struct CalendarView<DateView>: View where DateView: View {
          @ViewBuilder content: @escaping (Date) -> DateView) {
         self.interval = interval
         self.content = content
-        self.calendarVM.onChanged = onChanged
+        self.onChanged = onChanged
     }
     
     func updateMonthsAfterPagerSwipe(newIndex:Int) {
@@ -82,6 +83,8 @@ struct CalendarView<DateView>: View where DateView: View {
                 MonthView(month: month, content: self.content)
                     .environmentObject(calendarVM)
             }
+        }.onAppear {
+            self.calendarVM.onChanged = self.onChanged
         }
     }
 }
