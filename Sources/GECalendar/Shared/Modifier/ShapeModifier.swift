@@ -10,10 +10,10 @@ import SwiftUI
 #if os(iOS) || os(OSX)
 
 @available(iOS 14, macOS 11, *)
-public struct ShapeModifier: ViewModifier {
+struct ShapeModifier: ViewModifier {
     let shape: ShapeType?
       
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         switch shape {
         case .circle:
             content.clipShape(Circle())

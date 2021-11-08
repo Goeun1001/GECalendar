@@ -67,6 +67,7 @@ class WeekViewModel: ObservableObject {
     }
 }
 
+/// Week calendar showing events and selected date
 @available(macOS 11, *)
 public struct GEWeekView: View {
     @Environment(\.calendar) var calendar
@@ -78,6 +79,12 @@ public struct GEWeekView: View {
     
     private let onChanged: (Date) -> ()
     
+    /// Create an GEWeekView with selectedDate, appearance, onChanged
+    ///
+    /// - Parameters:
+    ///   - selectedDate: Selected date
+    ///   - appearance: Appearance class
+    ///   - onChanged: Behavior when the week changes
     public init(selectedDate: Binding<Date?>,
                 appearance: Binding<Appearance>,
                 onChanged: @escaping (Date) -> () = { _ in }) {
@@ -92,8 +99,7 @@ public struct GEWeekView: View {
             case .leading:
                 HStack {
                     Text(appearance.headerDateFormatter.string(from: weekVM.weeks[1]))
-                        .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
                     Spacer()
                     HStack {
@@ -119,7 +125,7 @@ public struct GEWeekView: View {
                         }
                     }
                     .padding(.trailing, 20)
-                }
+                }.font(appearance.headerFont)
             case .center:
                 HStack {
                     Button(action: {
@@ -129,8 +135,7 @@ public struct GEWeekView: View {
                     }.padding(.leading, 40)
                     Spacer()
                     Text(appearance.headerDateFormatter.string(from: weekVM.weeks[1]))
-                        .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
                     Spacer()
                     Button(action: {
@@ -139,7 +144,7 @@ public struct GEWeekView: View {
                         appearance.headerRightButtonImage
                     }
                     .padding(.trailing, 40)
-                }
+                }.font(appearance.headerFont)
             case .trailing:
                 HStack {
                     HStack {
@@ -166,10 +171,9 @@ public struct GEWeekView: View {
                     }.padding(.leading, 20)
                     Spacer()
                     Text(appearance.headerDateFormatter.string(from: weekVM.weeks[1]))
-                        .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
-                }
+                }.font(appearance.headerFont)
             }
         }
     }
@@ -194,9 +198,9 @@ public struct GEWeekView: View {
                             .padding(.horizontal, geo.size.width / 18)
                             .clipShape(Circle())
                             .overlay(
-                                Text(appearance.weekDayFormatter.shortWeekdaySymbols[index])
-                                    .foregroundColor(appearance.weekDayColor)
-                                    .font(appearance.weekDayFont)
+                                Text(appearance.weekTextDateFormatter.shortWeekdaySymbols[index])
+                                    .foregroundColor(appearance.weekTextColor)
+                                    .font(appearance.weekTextFont)
                             )
                     }
                 }
@@ -214,7 +218,7 @@ public struct GEWeekView: View {
                                         if calendar.isDateInToday(date) {
                                             appearance.todayColor
                                                 .modifier(
-                                                    ShapeModifier(shape: appearance.selectionShape)
+                                                    ShapeModifier(shape: appearance.selectedDateShape)
                                                 )
                                                 .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                         }
@@ -249,17 +253,17 @@ public struct GEWeekView: View {
                                             
                                         } else {
                                             // single events
-                                            if appearance.eventType == .fill && appearance.events.contains(where: {
+                                            if appearance.eventType == .fill && appearance.singleEvents.contains(where: {
                                                 calendar.isDate(date, inSameDayAs: $0)
                                             }) {
-                                                appearance.eventColor
-                                            } else if appearance.eventType == .circle && appearance.events.contains(where: {
+                                                appearance.singleEventColor
+                                            } else if appearance.eventType == .circle && appearance.singleEvents.contains(where: {
                                                 calendar.isDate(date, inSameDayAs: $0)
                                             }) {
                                                 Circle().frame(width: 10, height: 10)
-                                                    .foregroundColor(appearance.eventColor)
+                                                    .foregroundColor(appearance.singleEventColor)
                                                     .offset(y: geo.size.height / 20)
-                                            } else if appearance.eventType == .line && appearance.events.contains(where: {
+                                            } else if appearance.eventType == .line && appearance.singleEvents.contains(where: {
                                                 calendar.isDate(date, inSameDayAs: $0)
                                             }) {
                                                 HStack {
@@ -272,15 +276,15 @@ public struct GEWeekView: View {
                                         
                                         // common dates
                                         if selectedDate != nil && calendar.isDate(date, inSameDayAs: selectedDate!) {
-                                            appearance.selectionColor
+                                            appearance.selectedDateColor
                                                 .modifier(
-                                                    ShapeModifier(shape: appearance.selectionShape)
+                                                    ShapeModifier(shape: appearance.selectedDateShape)
                                                 )
                                                 .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                         }  else {
-                                            appearance.defaultColor
+                                            appearance.defaultDateColor
                                                 .modifier(
-                                                    ShapeModifier(shape: appearance.selectionShape)
+                                                    ShapeModifier(shape: appearance.selectedDateShape)
                                                 )
                                                 .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                         }
@@ -290,17 +294,17 @@ public struct GEWeekView: View {
                                 .padding(4)
                                 .overlay(
                                     Group {
-                                        if appearance.eventType == .text && appearance.events.contains(where: {
+                                        if appearance.eventType == .text && appearance.singleEvents.contains(where: {
                                             calendar.isDate(date, inSameDayAs: $0)
                                         }) {
                                             Text(String(self.calendar.component(.day, from: date)))
-                                                .foregroundColor(appearance.eventColor)
+                                                .foregroundColor(appearance.singleEventColor)
                                                 .onTapGesture {
                                                     self.selectedDate = date
                                                 }
                                         } else { // Event: None
                                             Text(String(self.calendar.component(.day, from: date)))
-                                                .foregroundColor(appearance.dayColor)
+                                                .foregroundColor(appearance.dayTextColor)
                                                 .onTapGesture {
                                                     self.selectedDate = date
                                                 }

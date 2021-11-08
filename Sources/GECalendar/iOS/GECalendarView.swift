@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+/// Calendar showing events and selected date
 @available(iOS 14, *)
 public struct GECalendar: View {
     @Environment(\.calendar) var calendar
@@ -19,6 +20,12 @@ public struct GECalendar: View {
     @Binding private var appearance: Appearance
     private let onChanged: (Date) -> ()
     
+    /// Create an GECalendar with selectedDate, appearance, onChanged
+    ///
+    /// - Parameters:
+    ///   - selectedDate: Selected date
+    ///   - appearance: Appearance class
+    ///   - onChanged: Behavior when the month changes
     public init(selectedDate: Binding<Date?>,
                 appearance: Binding<Appearance>,
                 onChanged: @escaping (Date) -> () = { _ in }) {
@@ -38,7 +45,7 @@ public struct GECalendar: View {
                             if calendar.isDateInToday(date) {
                                 appearance.todayColor
                                     .modifier(
-                                        ShapeModifier(shape: appearance.selectionShape)
+                                        ShapeModifier(shape: appearance.selectedDateShape)
                                     )
                             }
                             
@@ -72,16 +79,16 @@ public struct GECalendar: View {
                                 
                             } else {
                                 // single events
-                                if appearance.eventType == .fill && appearance.events.contains(where: {
+                                if appearance.eventType == .fill && appearance.singleEvents.contains(where: {
                                     calendar.isDate(date, inSameDayAs: $0)
                                 }) {
-                                    appearance.eventColor
-                                } else if appearance.eventType == .circle && appearance.events.contains(where: {
+                                    appearance.singleEventColor
+                                } else if appearance.eventType == .circle && appearance.singleEvents.contains(where: {
                                     calendar.isDate(date, inSameDayAs: $0)
                                 }) {
                                     Circle().frame(width: 7, height: 7)
-                                        .foregroundColor(appearance.eventColor)
-                                } else if appearance.eventType == .line && appearance.events.contains(where: {
+                                        .foregroundColor(appearance.singleEventColor)
+                                } else if appearance.eventType == .line && appearance.singleEvents.contains(where: {
                                     calendar.isDate(date, inSameDayAs: $0)
                                 }) {
                                     HStack {
@@ -93,14 +100,14 @@ public struct GECalendar: View {
                             
                             // common dates
                             if selectedDate != nil && calendar.isDate(date, inSameDayAs: selectedDate!) {
-                                appearance.selectionColor
+                                appearance.selectedDateColor
                                     .modifier(
-                                        ShapeModifier(shape: appearance.selectionShape)
+                                        ShapeModifier(shape: appearance.selectedDateShape)
                                     )
                             }  else {
-                                appearance.defaultColor
+                                appearance.defaultDateColor
                                     .modifier(
-                                        ShapeModifier(shape: appearance.defaultShape)
+                                        ShapeModifier(shape: appearance.defaultDateShape)
                                     )
                             }
                         }
@@ -109,17 +116,17 @@ public struct GECalendar: View {
                     .padding(4)
                     .overlay(
                         Group {
-                            if appearance.eventType == .text && appearance.events.contains(where: {
+                            if appearance.eventType == .text && appearance.singleEvents.contains(where: {
                                 calendar.isDate(date, inSameDayAs: $0)
                             }) {
                                 Text(String(self.calendar.component(.day, from: date)))
-                                    .foregroundColor(appearance.eventColor)
+                                    .foregroundColor(appearance.singleEventColor)
                                     .onTapGesture {
                                         self.selectedDate = date
                                     }
                             } else { // Event: None
                                 Text(String(self.calendar.component(.day, from: date)))
-                                    .foregroundColor(appearance.dayColor)
+                                    .foregroundColor(appearance.dayTextColor)
                                     .onTapGesture {
                                         self.selectedDate = date
                                     }

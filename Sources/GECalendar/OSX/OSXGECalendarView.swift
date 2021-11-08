@@ -9,6 +9,7 @@
 
 import SwiftUI
 
+/// Calendar showing events and selected date
 @available(macOS 11, *)
 public struct GECalendar: View {
     @Environment(\.calendar) var calendar
@@ -19,6 +20,12 @@ public struct GECalendar: View {
     @Binding private var appearance: Appearance
     private let onChanged: (Date) -> ()
     
+    /// Create an GECalendar with selectedDate, appearance, onChanged
+    ///
+    /// - Parameters:
+    ///   - selectedDate: Selected date
+    ///   - appearance: Appearance class
+    ///   - onChanged: Behavior when the month changes
     public init(selectedDate: Binding<Date?>,
                 appearance: Binding<Appearance>,
                 onChanged: @escaping (Date) -> () = { _ in }) {
@@ -43,7 +50,7 @@ public struct GECalendar: View {
                                 if calendar.isDateInToday(date) {
                                     appearance.todayColor
                                         .modifier(
-                                            ShapeModifier(shape: appearance.selectionShape)
+                                            ShapeModifier(shape: appearance.selectedDateShape)
                                         )
                                         .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                 }
@@ -79,17 +86,17 @@ public struct GECalendar: View {
                                     
                                 } else {
                                     // single events
-                                    if appearance.eventType == .fill && appearance.events.contains(where: {
+                                    if appearance.eventType == .fill && appearance.singleEvents.contains(where: {
                                         calendar.isDate(date, inSameDayAs: $0)
                                     }) {
-                                        appearance.eventColor
-                                    } else if appearance.eventType == .circle && appearance.events.contains(where: {
+                                        appearance.singleEventColor
+                                    } else if appearance.eventType == .circle && appearance.singleEvents.contains(where: {
                                         calendar.isDate(date, inSameDayAs: $0)
                                     }) {
                                         Circle().frame(width: 10, height: 10)
-                                            .foregroundColor(appearance.eventColor)
+                                            .foregroundColor(appearance.singleEventColor)
                                             .offset(y: geo.size.height / 20)
-                                    } else if appearance.eventType == .line && appearance.events.contains(where: {
+                                    } else if appearance.eventType == .line && appearance.singleEvents.contains(where: {
                                         calendar.isDate(date, inSameDayAs: $0)
                                     }) {
                                         HStack {
@@ -102,15 +109,15 @@ public struct GECalendar: View {
                                 
                                 // common dates
                                 if selectedDate != nil && calendar.isDate(date, inSameDayAs: selectedDate!) {
-                                    appearance.selectionColor
+                                    appearance.selectedDateColor
                                         .modifier(
-                                            ShapeModifier(shape: appearance.selectionShape)
+                                            ShapeModifier(shape: appearance.selectedDateShape)
                                         )
                                         .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                 }  else {
-                                    appearance.defaultColor
+                                    appearance.defaultDateColor
                                         .modifier(
-                                            ShapeModifier(shape: appearance.selectionShape)
+                                            ShapeModifier(shape: appearance.selectedDateShape)
                                         )
                                         .frame(maxWidth: appearance.osxMaxWidth, maxHeight: appearance.osxMaxHeight)
                                 }
@@ -120,14 +127,14 @@ public struct GECalendar: View {
                         .cornerRadius(4)
                         .overlay(
                             Group {
-                                if appearance.eventType == .text && appearance.events.contains(where: {
+                                if appearance.eventType == .text && appearance.singleEvents.contains(where: {
                                     calendar.isDate(date, inSameDayAs: $0)
                                 }) {
                                     Text(String(self.calendar.component(.day, from: date)))
-                                        .foregroundColor(appearance.eventColor)
+                                        .foregroundColor(appearance.singleEventColor)
                                 } else { // Event: None
                                     Text(String(self.calendar.component(.day, from: date)))
-                                        .foregroundColor(appearance.dayColor)
+                                        .foregroundColor(appearance.dayTextColor)
                                 }
                             }
                         )

@@ -43,7 +43,7 @@ struct MonthView<DateView>: View where DateView: View {
                 HStack {
                     Text(appearance.headerDateFormatter.string(from: month))
                         .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
                     Spacer()
                     HStack {
@@ -80,7 +80,7 @@ struct MonthView<DateView>: View where DateView: View {
                     Spacer()
                     Text(appearance.headerDateFormatter.string(from: month))
                         .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
                     Spacer()
                     Button(action: {
@@ -117,7 +117,7 @@ struct MonthView<DateView>: View where DateView: View {
                     Spacer()
                     Text(appearance.headerDateFormatter.string(from: month))
                         .font(appearance.headerFont)
-                        .foregroundColor(appearance.headerColor)
+                        .foregroundColor(appearance.headerTextColor)
                         .padding(.horizontal)
                 }
             }
@@ -137,9 +137,9 @@ struct MonthView<DateView>: View where DateView: View {
                         .clipShape(Circle())
                         .padding(.horizontal, 4)
                         .overlay(
-                            Text(appearance.weekDayFormatter.shortWeekdaySymbols[index])
-                                .foregroundColor(appearance.weekDayColor)
-                                .font(appearance.weekDayFont)
+                            Text(appearance.weekTextDateFormatter.shortWeekdaySymbols[index])
+                                .foregroundColor(appearance.weekTextColor)
+                                .font(appearance.weekTextFont)
                         )
                 }
             }
